@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/karoterra/aviutl2-aulua/refs/heads/main/schema/aulua.schema.json
+project:
+  variables:
+    NAME: MovingMosaic_S
+    AUTHOR: σ軸
+    PUBLISH_PAGE: https://github.com/sigma-axis/aviutl2_script_MovingMosaic_S
+    LEAST_AVIUTL_VERSION: "2010800"
+    LEAST_AVIUTL_VERSION_STRING: "2.1.8"
+
+package:
+  id: MovingMosaic_S
+  name: 動くモザイクスクリプト MovingMosaic_S
+  version: v1.00-rc
+  information: "{name} {version} by {AUTHOR}"
+  script_sub_dir: "{id}"
+  uninstall_sub_folder_file: false
+  message:
+    text: |
+      # MovingMosaic_S AviUtl ExEdit2 動くモザイクスクリプト
+
+      静止画にかけても動くモザイクがかけられるスクリプトです．
+      マス内のランダムな位置から色を拾います．
+      マスの位置を調節したり，サイズも小数点以下の細かさで指定したり，
+      縦長や横長のマスにもできます．
+
+      公開ページ:
+      https://github.com/sigma-axis/aviutl2_script_MovingMosaic_S
+
+      紹介動画:
+      https://www.nicovideo.jp/shorts/ss46874324
+
+      お願い:
+      ニコニコ動画での親作品登録をしていただけると励みになります．
+      作品 ID: ss46874324
+
+  assets:
+    - src: README.md
+      dest: Script/{id}/README.md
+    - src: LICENSE
+      dest: Script/{id}/LICENSE
+  file_name: package.au2pkg.zip
+
+build:
+  out_dir: build
+
+scripts:
+  - name: "MovingMosaic_S.anm2"
+    sources:
+      - path: script/preamble.lua
+      - path: script/main.lua
+
+language:
+  files:
+    - path: build/Default.MovingMosaic_S.aul2
+      text: false
+      tooltip: true
