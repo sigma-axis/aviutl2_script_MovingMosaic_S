@@ -97,7 +97,7 @@ Although, usage documentations for this script in languages other than Japanese 
 
 ## 改版履歴
 
-- **v1.00** (2026-??-??)
+- **v1.00** (2026-10-02)
 
   - 初版．
 
