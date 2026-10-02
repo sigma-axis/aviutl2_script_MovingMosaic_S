@@ -6,7 +6,7 @@
 
 [ダウンロードはこちら．](https://github.com/sigma-axis/aviutl2_script_MovingMosaic_S/releases) [紹介動画．](https://www.nicovideo.jp/shorts/ss46874324)
 
-TODO: sample image (webp)
+![動くモザイクの適用例](https://github.com/user-attachments/assets/381cb864-3ee1-4225-aa56-4b9d02c7e10b)
 
 ##  お願い
 
