@@ -77,6 +77,7 @@ aspect = math.min(math.max(aspect / 100, -1), 1);
 if aspect > 0 then size_x = size_x * (1 - aspect) end
 if aspect < 0 then size_y = size_y * (1 + aspect) end
 size_x, size_y = math.max(size_x, 1), math.max(size_y, 1);
+if size_x <= 1 and size_y <= 1 then return end
 seed = math.floor(seed); -- not the nearest, but simple floor.
 if seed >= 0 then
 	seed = seed

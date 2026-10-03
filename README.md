@@ -100,6 +100,7 @@ Although, usage documentations for this script in languages other than Japanese 
 - **v1.01** (2026-10-03)
 
   - マスの平行移動などでの小数点以下のピクセル数の取り扱いが間違っていたのを修正．
+  - 「サイズ」の項目が 1.00 の場合は何もしないように変更．
 
 ## 改版履歴
 
