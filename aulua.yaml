@@ -10,7 +10,7 @@ project:
 package:
   id: MovingMosaic_S
   name: 動くモザイクスクリプト MovingMosaic_S
-  version: v1.00
+  version: v1.01-wip
   information: "{name} {version} by {AUTHOR}"
   script_sub_dir: "{id}"
   uninstall_sub_folder_file: false

@@ -89,13 +89,18 @@ cx, cy = cx + X + obj.w / 2, cy + Y + obj.h / 2;
 
 --#endregion PI / normalize parameters.
 
+-- further calculations.
+local L, R, T, B =
+	math.floor(-cx / size_x), math.ceil((obj.w - cx) / size_x),
+	math.floor(-cy / size_y), math.ceil((obj.h - cy) / size_y);
+
 -- apply shaders.
 local cache_name = "cache:movingmosaic_s/temp";
-obj.clearbuffer(cache_name, obj.w, obj.h);
+obj.clearbuffer(cache_name, R - L, B - T);
 obj.pixelshader("mosaic", cache_name, "object", {
-	obj.w, obj.h; size_x, size_y; cx, cy; seed;
+	L, T; obj.w, obj.h; size_x, size_y; cx, cy; seed;
 });
 
 obj.pixelshader(convex and "tile" or "antialias", "object", cache_name, {
-	obj.w, obj.h; size_x, size_y; cx, cy;
+	L, T; R - L, B - T; size_x, size_y; cx, cy;
 }, "copy", "clamp");
